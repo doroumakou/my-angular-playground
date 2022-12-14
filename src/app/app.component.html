@@ -1,0 +1,12 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+<div>
+  <form [formGroup]="myForm">
+    <mat-form-field appearance="outline">
+      <input matInput required formControlName="myname" />
+    </mat-form-field>
+    <mat-error *ngIf="isInvalid('myname')">required err msg</mat-error>
+  </form>
+  <button color="primary" (click)="handleClick()">click me</button>
+  <button color="primary" (click)="reset()">reset</button>
+</div>
